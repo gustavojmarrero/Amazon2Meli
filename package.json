@@ -4,13 +4,21 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "functions-framework --target=amazon2meli",
+    "deploy": "gcloud functions deploy amazon2meli --runtime nodejs20 --trigger-http --allow-unauthenticated"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
     "@google-cloud/functions-framework": "^3.4.2",
-    "googleapis": "^143.0.0"
+    "axios": "^1.7.7",
+    "dotenv": "^16.4.5",
+    "express": "^4.19.2",
+    "googleapis": "^143.0.0",
+    "moment": "^2.30.1",
+    "mongoose": "^8.6.0",
+    "p-queue": "^8.0.1"
   }
 }
